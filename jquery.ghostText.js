@@ -67,13 +67,17 @@
                 settings = defaults;
                 methods.updateSettings(opts);
                 
+                //in case a different text was passed in that is currently in the input,
+                //set the value from the settings
+                $self.val( settings.ghostText );
+                
                 //check for needing to set a parent form submit event
                 if (settings.clearOnSubmit){
                     //see if the ID of the form was passed in
                     if (settings.parentForm){
                         //use it to apply submit function
-                        $( '#' + settings.parentForm.replace('#', '') ).submit(function(){
-                            methods.parentFormSubmit();
+                        $( '#' + settings.parentForm.replace('#', '') ).submit(function(e){
+                            methods.parentFormSubmit(e);
                         });
                     }
                     //otherwise we do a search for the closest form and assume it
