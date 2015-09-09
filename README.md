@@ -1,5 +1,11 @@
 # Ghost Text
 
+**Notice!**
+
+Just in case anyone stumbles upon this repo, what you're looking for is really the "placeholder" attribute. This plugin pre-dates that attribute and provides the same functionality, but with the additional cost of javascript. This repo is being kept simply for archival purposes.
+
+**End of notice, thanks for reading!**
+
 Ghost Text is used to present default text inside of an input and then clear it when the user
 gives focus. When the user exits (blurs) the input, if they have not entered their own value
 the ghost text is then put back in the input.
